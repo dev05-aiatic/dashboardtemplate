@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "node server.mjs",
     "build": "ng build",
+    "heroku-postbuild": "ng build --configuration production",    
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "rtl": "webpack --config webpack-rtl.config.js"
@@ -14,6 +15,10 @@
 
   "private": true,
   "dependencies": {
+
+    "@angular/cli": "^13.3.2",
+    "@angular/compiler-cli": "~13.1.1", 
+    "typescript": "~4.5.2",    
     "@angular/animations": "~13.1.1",
     "@angular/common": "~13.1.1",
     "@angular/compiler": "~13.1.1",
@@ -67,8 +72,8 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~13.1.2",
-    "@angular/cli": "^13.3.2",
-    "@angular/compiler-cli": "~13.1.1",
+
+    
     "@types/feather-icons": "^4.7.0",
     "@types/jasmine": "~3.10.0",
     "@types/node": "^12.11.1",
@@ -79,7 +84,7 @@
     "karma-coverage": "~2.1.0",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.7.0",
-    "typescript": "~4.5.2",
+    
     "webpack-cli": "^4.9.1",
     "webpack-messages": "^2.0.4",
     "webpack-rtl-plugin": "^2.0.0"
